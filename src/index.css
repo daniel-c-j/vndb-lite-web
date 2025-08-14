@@ -7,4 +7,31 @@
   src: url("./assets/font/quicksand.ttf");
 }
 
-@layer base {}
+@layer base {
+  .root {
+    @apply w-full max-w-[1480px] bg-gray-100/40 shadow-md shadow-gray-400/80 font-[quicksand];
+  }
+
+  .first-view-body {
+    @apply w-full h-[100vh] max-h-[100vh] relative bg-gradient-to-r animate-gradient from-blue-950 to-sky-600 text-white;
+  }
+}
+
+@utility animate-gradient {
+  background-size: 200% 200%;
+  animation: gradient 5s ease infinite;
+}
+
+@keyframes gradient {
+  0% {
+    background-position: 0% 50%;
+  }
+
+  50% {
+    background-position: 100% 50%;
+  }
+
+  100% {
+    background-position: 0% 50%;
+  }
+}
