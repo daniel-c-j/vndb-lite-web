@@ -46,7 +46,7 @@ const Meta = memo(() => {
       <meta property="og:description" content={PROJECT_DESC} />
       <meta property="og:image" content={iconUrl} />
 
-      <link rel="icon" type="image/png" href="/icon.png" sizes="32x32" />
+      <link rel="icon" type="image/png" href="icons/icon.png" sizes="32x32" />
       <title>{PROJECT_NAME}</title>
     </>,
     document.getElementById("html-head")
