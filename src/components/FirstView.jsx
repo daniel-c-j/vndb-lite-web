@@ -23,7 +23,7 @@ export default function FirstView() {
 }
 
 function RepositoryButtons() {
-  const iconStyle = "size-7 sm:size-9 mr-3 md:mr-4";
+  const iconStyle = "size-7 sm:size-8 mr-3 md:mr-4";
 
   return (
     <div className="absolute top-0 left-0 z-24 p-4 sm:p-6 md:p-8 flex flex-row in-slide-down">

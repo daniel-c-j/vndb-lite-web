@@ -5,7 +5,7 @@ export function ObtainiumBadge() {
   return (
     <a
       href={obtUrl}
-      className="flex w-48 md:w-52 mx-auto sm:mx-0 opacity-85 hover:opacity-100 active:opacity-100"
+      className="flex w-48 lg:w-52 mx-auto sm:mx-0 opacity-85 hover:opacity-100 active:opacity-100"
     >
       <img src="/badge-obtainium.png" alt="Obtainium" draggable="false" />
     </a>
@@ -14,7 +14,7 @@ export function ObtainiumBadge() {
 
 export function UpcomingBadges() {
   return (
-    <div className="flex flex-row w-30 md:w-38 mt-2 relative -translate-x-[52.5%] mx-auto sm:mx-0 sm:translate-x-0">
+    <div className="flex flex-row w-30 lg:w-38 mt-2 relative -translate-x-[52.5%] mx-auto sm:mx-0 sm:translate-x-0">
       <p className="absolute top-[50%] left-[100%] -translate-[50%] z-1 font-semibold text-base text-shadow-lg text-shadow-neutral-800">
         Upcoming...!
       </p>
