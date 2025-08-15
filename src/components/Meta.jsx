@@ -26,6 +26,7 @@ const keywords = [
   "android",
   "ios",
   "flutter",
+  "dart",
   "open source",
   "mobile app",
   "cross platform",

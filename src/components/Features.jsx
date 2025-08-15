@@ -1,3 +1,5 @@
+import { AttentionSeeker, Fade, Slide } from "react-awesome-reveal";
+
 const featuresData = [
   {
     id: "feature1",
@@ -39,41 +41,65 @@ const featuresData = [
 
 export default function Features() {
   return (
-    <div className="p-12 pt-0">
-      {featuresData.map((feature, index) => (
-        <FeatureItem
-          key={feature.id}
-          id={feature.id}
-          title={feature.title}
-          desc={feature.text}
-          imgPath={feature.path}
-          textDirection={index % 2 === 0 ? "right" : "left"}
-        />
-      ))}
-      <FeatureEndContent />
-    </div>
+    <>
+      <div className="p-12 pt-0 hidden sm:inline">
+        {featuresData.map((feature, index) => (
+          <FeatureItem
+            key={feature.id}
+            id={feature.id}
+            title={feature.title}
+            desc={feature.text}
+            imgPath={feature.path}
+            textDirection={index % 2 === 0 ? "right" : "left"}
+          />
+        ))}
+        <FeatureEndContent />
+      </div>
+
+      {/* Only for mobile */}
+      <div className="p-12 pt-0 sm:hidden">
+        {featuresData.map((feature) => (
+          <FeatureItem
+            key={feature.id}
+            id={feature.id}
+            title={feature.title}
+            desc={feature.text}
+            imgPath={feature.path}
+            textDirection="right!"
+          />
+        ))}
+        <FeatureEndContent />
+      </div>
+    </>
   );
 }
 
 function FeatureItem({ id, textDirection, imgPath, title, desc }) {
   const img = (
-    <img
-      src={imgPath}
-      alt={id}
-      className="flex-none max-h-[640px] max-w-[35%]"
-      draggable="false"
-    />
+    <div className="feature-img">
+      <Fade childClassName="max-h-[640px]" triggerOnce>
+        <img src={imgPath} alt={id} draggable="false" />
+      </Fade>
+    </div>
   );
   const txt = (
-    <div className="flex-none max-w-[35%] text-left">
-      <h1 className="text-3xl font-semibold my-2">{title}</h1>
-      <p className="text-lg">{desc}</p>
+    <div className="feature-txt">
+      <Slide
+        direction={textDirection === "right!" ? "down" : textDirection}
+        duration={700}
+        triggerOnce
+      >
+        <h1 className="text-2xl sm:text-3xl font-semibold my-1 sm:my-2">
+          {title}
+        </h1>
+        <p className="sm:text-lg">{desc}</p>
+      </Slide>
     </div>
   );
 
   return (
-    <div className="my-36 flex flex-row justify-center items-center gap-16">
-      {textDirection === "right" ? img : txt}
+    <div className="features">
+      {textDirection === "right" || textDirection === "right!" ? img : txt}
       {textDirection === "left" ? img : txt}
     </div>
   );
@@ -83,40 +109,43 @@ function FeatureEndContent() {
   const iconStyle = "size-8 mr-2";
   return (
     <>
-      <h1 className="text-3xl font-semibold my-2">
+      <h1 className="text-2xl sm:text-3xl font-semibold my-2">
         With many other cool features...!
       </h1>
+
       <div className="flex flex-row justify-center items-center">
-        <img
-          src="icons/sync.svg"
-          title="Synchronization"
-          alt="sync"
-          className={iconStyle}
-        />
-        <img
-          src="icons/chart.svg"
-          title="Ugly pie chart"
-          alt="chart"
-          className={iconStyle}
-        />
-        <img
-          src="icons/offline.svg"
-          title="Offline mode"
-          alt="offline"
-          className={iconStyle}
-        />
-        <img
-          src="icons/theme.svg"
-          title="11 official VNDB theme"
-          alt="theme"
-          className={iconStyle}
-        />
-        <img
-          src="icons/more.svg"
-          title="And more!"
-          alt="more"
-          className={iconStyle}
-        />
+        <AttentionSeeker effect="pulse" cascade="true" delay={100}>
+          <img
+            src="icons/sync.svg"
+            title="Synchronization"
+            alt="sync"
+            className={iconStyle}
+          />
+          <img
+            src="icons/chart.svg"
+            title="Ugly pie chart"
+            alt="chart"
+            className={iconStyle}
+          />
+          <img
+            src="icons/offline.svg"
+            title="Offline mode"
+            alt="offline"
+            className={iconStyle}
+          />
+          <img
+            src="icons/theme.svg"
+            title="11 official VNDB theme"
+            alt="theme"
+            className={iconStyle}
+          />
+          <img
+            src="icons/more.svg"
+            title="And more!"
+            alt="more"
+            className={iconStyle}
+          />
+        </AttentionSeeker>
       </div>
     </>
   );
