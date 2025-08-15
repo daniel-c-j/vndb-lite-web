@@ -60,11 +60,7 @@ function FirstViewContent() {
   return (
     <div className="front-face-body">
       <div className="front-face-img">
-        <img
-          src="/hero-2.png"
-          alt="project image highlight"
-          draggable="false"
-        />
+        <img src="hero-2.png" alt="project image highlight" draggable="false" />
       </div>
 
       <div className="front-face-txt">

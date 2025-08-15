@@ -7,7 +7,7 @@ export function ObtainiumBadge() {
       href={obtUrl}
       className="flex w-48 lg:w-52 mx-auto sm:mx-0 opacity-85 hover:opacity-100 active:opacity-100"
     >
-      <img src="/badge-obtainium.png" alt="Obtainium" draggable="false" />
+      <img src="badge-obtainium.png" alt="Obtainium" draggable="false" />
     </a>
   );
 }
@@ -20,13 +20,13 @@ export function UpcomingBadges() {
       </p>
 
       <img
-        src="/badge-playstore.png"
+        src="badge-playstore.png"
         alt="Playstore"
         draggable="false"
         className="flex-none mr-2 opacity-60"
       />
       <img
-        src="/badge-appstore.png"
+        src="badge-appstore.png"
         alt="Appstore"
         draggable="false"
         className="flex-none mr-2 opacity-60"
