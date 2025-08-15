@@ -1,5 +1,6 @@
+import Features from "./components/Features";
 import FirstView from "./components/FirstView";
-import Header from "./components/Header";
+import Footer from "./components/Footer";
 import Meta from "./components/Meta";
 
 function App() {
@@ -8,10 +9,8 @@ function App() {
       <Meta />
       <ContentWrapper>
         <FirstView />
-        <p>Hello</p>
-        <p>Hello</p>
-        <p>Hello</p>
-        <p>Hello</p>
+        <Features />
+        <Footer />
       </ContentWrapper>
     </>
   );
