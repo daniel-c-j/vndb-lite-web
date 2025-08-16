@@ -47,6 +47,10 @@
   .footer-bg {
     @apply absolute top-0 right-0 z-0 h-[100%] object-top-right object-cover clip-diagonal-right;
   }
+
+  .spinner {
+    @apply inline-block border-2 border-black border-b-transparent rounded-[50%] box-border animate-spin;
+  }
 }
 
 @utility animate-gradient {
