@@ -13,23 +13,15 @@ export default function Footer() {
         draggable="false"
       />
 
-      <img
-        src="icons/iconHD.png"
-        alt="icon"
-        title="App icon"
-        draggable="false"
-        className="size-8 sm:size-10 md:size-12 lg:size-14 absolute top-4 right-4 sm:top-5 md:top-6 sm:right-5 md:right-6 opacity-85"
-      />
-
       <div className="relative z-1">
         <Slide direction="up" duration={600} triggerOnce>
           <h1 className="text-3xl pb-2">
             Choose the <span className="font-semibold">better</span> experience.
           </h1>
 
-          <DownloadButton addStyle="my-4 justify-center items-center" />
+          <DownloadButton addStyle="my-2 md:my-4 justify-center items-center" />
 
-          <p className="my-4 md:my-2">OR</p>
+          <p className="mb-3 md:my-4">OR</p>
 
           <ObtainiumBadge />
         </Slide>
