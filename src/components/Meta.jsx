@@ -50,7 +50,7 @@ const Meta = memo(() => {
       <link rel="icon" type="image/png" href="icons/icon.png" sizes="32x32" />
       <title>{PROJECT_NAME}</title>
     </>,
-    document.getElementById("html-head")
+    document.head
   );
 });
 
